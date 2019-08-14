@@ -1,0 +1,133 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int pola[9],wybor,ruch=0,proba;
+    for(int zerowanie=0;zerowanie<=8;zerowanie++)
+    {
+        pola[zerowanie]=0;
+    }
+    for(int i=0;i<=1000;i++)
+    {
+        //rozpoczęcie nowego ruchu
+
+    cout<<"+---+---+---+---+"<<endl;
+    cout<<"| X | A | B | C |"<<endl;
+    cout<<"+---+---+---+---+"<<endl;
+    cout<<"| 1 | "<<pola[0]<" | "<<pola[1]<<" | "<<pola[2]<<" |"<<endl;
+    cout<<"+---+---+---+---+"<<endl;
+    cout<<"| 2 | "<<pola[3]<<" | "<<pola[4]<<" | "<<pola[5]<<" |"<<endl;
+    cout<<"+---+---+---+---+"<<endl;
+    cout<<"| 3 | "<<pola[6]<<" | "<<pola[7]<<" | "<<pola[8]<<" |"<<endl;
+    cout<<"+---+---+---+---+"<<endl;
+
+        //warunek zwycięstwaGracza1
+
+        if ( (pola[0]==1 && pola[1]==1 && pola[2]==1) || (pola[3]==1 && pola[4]==1 && pola[5]==1) || (pola[6]==1 && pola[7]==1 && pola[8]==1) || (pola[0]==1 && pola[3]==1 && pola[6]==1) || (pola[1]==1 && pola[4]==1 && pola[7]==1) || (pola[2]==1 && pola[5]==1 && pola[8]==1) || (pola[0]==1 && pola[4]==1 && pola[8]==1) || (pola[2]==1 && pola[4]==1 && pola[6]==1))
+            {
+            cout<<"Gracz 1 wygrał w "<<ruch<<" turach !!!";
+            }
+
+        //warunek zwycięstwaGracza2
+
+        if ( (pola[0]==2 && pola[1]==2 && pola[2]==2) || (pola[3]==2 && pola[4]==2 && pola[5]==2) || (pola[6]==2 && pola[7]==2 && pola[8]==2) || (pola[0]==2 && pola[3]==2 && pola[6]==2) || (pola[1]==2 && pola[4]==2 && pola[7]==2)|| (pola[2]==2 && pola[5]==2 && pola[8]==2) || (pola[0]==2 && pola[4]==2 && pola[8]==2) || (pola[2]==2 && pola[4]==2 && pola[6]==2))
+            {
+            cout<<"Gracz 2 wygrał w "<<ruch<<" turach !!!";
+            }
+        //ustawianie koleji
+        ruch++;
+        proba=0;
+                cout<<"wybierz pole Graczu 1"<<endl;
+                cout<<"1-A1  2-B1  3-C1"<<endl;
+                cout<<"4-A2  5-B2  6-C2"<<endl;
+                cout<<"7-A3  8-B3  9-C3"<<endl;
+
+        //gracz 1
+        if(1==ruch%2){
+            while(proba!=1){
+            cin>>wybor;
+            switch(wybor){
+            case 1:
+                {
+                if(pola[0]==0)
+                    {
+                    pola[0]=1;
+                    proba=1;
+                    }
+                else
+                    {
+                   case 2 :
+                {
+                if(pola[1]==0)
+                    {
+                    pola[1]=1;
+                    proba=1;
+                    }
+                else
+                    {
+            case 3:
+                {
+                if(pola[2]==0)
+                    {
+                    pola[2]=1;
+                    proba=1;
+                    }
+                else
+                    {
+            case 4:
+                {
+                if(pola[3]==0)
+                    {
+                    pola[3]=1;
+                    proba=1;
+                    }
+                else
+                    {
+            case 5:
+                {
+                if(pola[4]==0)
+                    {
+                    pola[4]=1;
+                    proba=1;
+                    }
+                else
+                    {
+            case 6:
+                {
+                if(pola[5]==0)
+                    {
+                    pola[5]=1;
+                    proba=1;
+                    }
+                else
+                    {
+            case 7:
+                {
+                if(pola[6]==0)
+                    {
+                    pola[6]=1;
+                    proba=1;
+                    }
+                else
+                    {
+            case 8:
+                {
+                if(pola[7]==0)
+                    {
+                    pola[7]=1;
+                    proba=1;
+                    }
+                else
+                    {
+
+                    }
+                }
+            case 9:
+                {
+                if(pola[8]==0)
+                    {
+                    pola[8]=1;
+                    proba=1;
+                    }
